@@ -1,0 +1,11 @@
+---
+- hosts: win
+  tasks:
+    - name: Copy file to Windows
+      ansible.windows.win_copy:
+        src: /root/ssh.txt  # Path to the file on your Ansible host
+        dest: C:\  # Destination path on the Windows host
+#        remote_src: no  # Optional:  If source is also on a remote host, set to yes
+#        owner: your_user  # Optional: Set file owner
+#        group: your_group # Optional: Set file group
+#        mode: '0644' # Optional: Set file permissions
